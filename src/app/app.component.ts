@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiService } from './services/api.service';
+import { constantUri } from './utils/constantUri';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'moviles-5A';
+
+    constructor(
+      private apiService: ApiService<any>
+    ){
+      const getConfig = { url: constantUri.tokenNew, params:{api_key: constantUri.apikey}};
+      this.apiService.getService( getConfig ).subscribe( val => {
+      console.log(val);
+        //console.log(val)
+        const {request_token} = val;
+        sessionStorage.setItem('requestToken', request_token);
+      });
+    }
+  title = 'movies';
 }

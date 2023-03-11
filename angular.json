@@ -25,7 +25,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+             "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -37,7 +40,7 @@
                   "maximumWarning": "500kb",
                   "maximumError": "1mb"
                 },
-                {
+                {ng g c modules/login
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
@@ -82,17 +85,24 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+             "node_modules/primeicons/primeicons.css",
+             "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+             "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "04d18788-2987-4dc1-ae71-9e51bbd0c7d0"
   }
 }
